@@ -1,0 +1,67 @@
+@use 'utils' as u;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800;900&display=swap');
+
+//Reset
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  color: var(--color-black-base);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  color: var(--color-black-base);
+  font-weight: var(--font-weight-xxbd);
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--fs-lg);
+}
+
+h3 {
+  font-size: var(--fs-base);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+//
+// ol {
+//   list-style-type: none;
+//   counter-reset: li;
+//
+//   li:before {
+//     counter-increment: li;
+//     content: counter(li, decimal-leading-zero);
+//     color: red;
+//   }
+// }

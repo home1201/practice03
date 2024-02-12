@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/main.js"></script>
+  <title>네 번째 연습</title>
+</head>
+
+<body>
+  <header class="wrapper header flex">
+    <a class="header__logo" href="#"><img src="images/logo.svg" alt="go to homepage"></a>
+    <nav aria-label="메인 메뉴, Primary menu">
+      <ul class="header__menu flex">
+        <li><a class="header__link" href="#">Pricing</a></li>
+        <li><a class="header__link" href="#">Product</a></li>
+        <li><a class="header__link" href="#">About Us</a></li>
+        <li><a class="header__link" href="#">Careers</a></li>
+        <li class="u-margin-right-auto"><a class="header__link" href="#">Community</a></li>
+      </ul>
+    </nav>
+    <a class="header__link button" href="#">Get Started</a>
+  </header>
+  <main>
+    <section class="hero flex wrapper">
+      <div class="hero__content">
+        <h1 class="hero__heading">Bring everyone together to build better products.</h1>
+        <p class="hero__description">Manage makes it simple for software teams to plan day-to-day
+          tasks while keeping the larger team goals in view.</p>
+        <a class="hero__link button" href="#">Get Started</a>
+      </div>
+      <img src="images/illustration-intro.svg" alt="" class="hero__image">
+    </section>
+    <section class="difference wrapper">
+      <h2 class="difference__heading">What’s different about Manage?</h2>
+      <p class="difference__description">Manage provides all the functionality your team needs, without
+        the complexity. Our software is tailor-made for modern digital
+        product teams.</p>
+      <section class="difference__feature-list">
+        <article class="difference__feature feature">
+          <h3 class="feature__heading">Track company-wide progress</h3>
+          <p class="feature__description">See how your day-to-day tasks fit into the wider vision. Go from
+            tracking progress at the milestone level all the way done to the
+            smallest of details. Never lose sight of the bigger picture again.</p>
+        </article>
+        <article class="difference__feature feature">
+          <h3 class="feature__heading">Advanced built-in reports</h3>
+          <p class="feature__description">Set internal delivery estimates and track progress toward company
+            goals. Our customisable dashboard helps you build out the reports
+            you need to keep key stakeholders informed.</p>
+        </article>
+        <article class="difference__feature feature">
+          <h3 class="feature__heading">Everything you need in one place</h3>
+          <p class="feature__description">Stop jumping from one service to another to communicate, store files,
+            track tasks and share documents. Manage offers an all-in-one team
+            productivity solution.</p>
+        </article>
+      </section>
+    </section>
+    <section class="recommend wrapper">
+      <h2 class="recommend__heading">What they’ve said</h2>
+      <section class="recommend__comment-list">
+        <article class="recommend__comment comment">
+          <div class="comment__person">Anisha Li</div>
+          <p class="comment__content">“Manage has supercharged our team’s workflow. The ability to maintain
+            visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </article>
+        <article class="recommend__comment comment">
+          <div class="comment__person">Ali Bravo</div>
+          <p class="comment__content">“We have been able to cancel so many other subscriptions since using
+            Manage. There is no more cross-channel confusion and everyone is much
+            more focused.”</p>
+        </article>
+        <article class="recommend__comment comment">
+          <div class="comment__person">Richard Watts</div>
+          <p class="comment__content">“Manage allows us to provide structure and process. It keeps us organized
+            and focused. I can’t stop recommending them to everyone I talk to!”</p>
+        </article>
+        <article class="recommend__comment comment">
+          <div class="comment__person">Shanai Gough</div>
+          <p class="comment__content">“Their software allows us to track, manage and collaborate on our projects
+            from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </article>
+      </section>
+      <a class="recommend__link button" href="#">Get Started</a>
+    </section>
+    <section class="cta">
+      <div class="wrapper">
+        <h2 class="cta__heading">Simplify how your team works today.</h2>
+        <a class="cta__link button button--white" href="#">Get Started</a>
+      </div>
+    </section>
+  </main>
+  <footer class="wrapper footer">
+    <div class="footer__contact contact">
+      <img src="images/logo.svg" alt="">
+      <div>
+        <a class="contact__link" href="#"><img src="images/icon-facebook.svg" alt="facebook link"></a>
+        <a class="contact__link" href="#"><img src="images/icon-youtube.svg" alt="youtube link"></a>
+        <a class="contact__link" href="#"><img src="images/icon-twitter.svg" alt="twitter link"></a>
+        <a class="contact__link" href="#"><img src="images/icon-pinterest.svg" alt="pinterest link"></a>
+        <a class="contact__link" href="#"><img src="images/icon-instagram.svg" alt="instagram link"></a>
+      </div>
+    </div>
+    <ul class="footer__menu menu" aria-label="보조 메뉴, Seconday menu">
+      <li><a class="menu__link" href="#">Home</a></li>
+      <li><a class="menu__link" href="#">Pricing</a></li>
+      <li><a class="menu__link" href="#">Product</a></li>
+      <li><a class="menu__link" href="#">About Us</a></li>
+      <li><a class="menu__link" href="#">Careers</a></li>
+      <li><a class="menu__link" href="#">Community</a></li>
+      <li><a class="menu__link" href="#">Get Started</a></li>
+      <li><a class="menu__link" href="#">Privacy Policy</a></li>
+    </ul>
+    <form class="footer__subscription subscription" action="#">
+      <label class="subscription__label" for="email">Updates in your inbox…</label>
+      <input class="subscription__input" id="email" type="text" required>
+      <button class="subscription__button button" type="submit">Go</button>
+    </form>
+    <p><small class="footer__copyright">Copyright 2020. All Rights Reserved</small></p>
+  </footer>
+</body>
+
+</html>

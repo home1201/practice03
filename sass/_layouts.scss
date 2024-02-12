@@ -1,0 +1,43 @@
+.header {
+  margin-top: var(--space-500);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+  &__menu {
+    gap: var(--space-500);
+    flex-wrap: wrap;
+  }
+
+  &__link:hover {
+    color: var(--color-black-light);
+  }
+
+  &__logo {
+    align-self: end;
+  }
+
+}
+
+.hero {
+  margin-top: var(--space-700);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__content {
+    width: 40%;
+  }
+
+  &__heading {
+    margin-bottom: var(--space-400);
+  }
+
+  &__description {
+    width: 80%;
+    margin-bottom: var(--space-600);
+  }
+
+
+}

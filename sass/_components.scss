@@ -1,0 +1,30 @@
+@use './utils' as u;
+@use './variables' as v;
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.wrapper {
+  width: min(v.$content-max-width, 100% - 2rem);
+  margin-inline: auto;
+}
+
+
+.button,
+a.button {
+  padding: var(--space-300) var(--space-500);
+  background-color: var(--color-red-base);
+  color: var(--color-gray-base);
+  border-radius: var(--radius-base);
+}
+
+.button:hover,
+a.button:hover {
+  background-color: var(--color-red-light);
+  color: var(--color-gray-base);
+}

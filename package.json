@@ -1,0 +1,16 @@
+{
+  "name": "vite-sass-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gh-deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.0.8"
+  }
+}
