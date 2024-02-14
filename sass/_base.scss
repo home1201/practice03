@@ -16,16 +16,20 @@ html {
 
 body {
   font-family: 'Be Vietnam Pro', system-ui, sans-serif;
-  color: var(--color-black-base);
+  color: var(--color-black-light);
   font-size: var(--fs-base);
   line-height: 1.6;
+  letter-spacing: -.25px;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: left 100% top -25%;
+  background-size: auto 45%;
 }
 
-a,
-a:link,
-a:visited {
+a {
+  font-weight: var(--font-weight-bd);
+  letter-spacing: -.5px;
   text-decoration: none;
-  color: inherit;
 }
 
 h1,
@@ -38,15 +42,19 @@ h3 {
 
 h1 {
   font-size: var(--fs-xxl);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
 }
 
 h2 {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 h3 {
   font-size: var(--fs-base);
+  letter-spacing: -.75px;
 }
 
 ul,

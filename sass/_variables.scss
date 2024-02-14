@@ -19,13 +19,13 @@
   --font-weight-xbd: 700;
   --font-weight-xxbd: 800;
 
-  --fs-sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem);
-  --fs-base: clamp(1rem, 0.23vw + 0.94rem, 1.13rem);
-  --fs-md: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem);
-  --fs-lg: clamp(1.56rem, 0.79vw + 1.36rem, 2rem);
-  --fs-xl: clamp(1.95rem, 1.29vw + 1.63rem, 2.66rem);
-  --fs-xxl: clamp(2.44rem, 2.02vw + 1.94rem, 3.55rem);
-  --fs-xxxl: clamp(3.05rem, 3.06vw + 2.29rem, 4.73rem);
+  --fs-sm: clamp(0.8rem, -0.01vw + 0.8rem, 0.8rem);
+  --fs-base: clamp(1rem, 0.11vw + 0.97rem, 1.06rem);
+  --fs-md: clamp(1.25rem, 0.3vw + 1.17rem, 1.42rem);
+  --fs-lg: clamp(1.56rem, 0.59vw + 1.41rem, 1.89rem);
+  --fs-xl: clamp(1.95rem, 1.02vw + 1.7rem, 2.52rem);
+  --fs-xxl: clamp(2.44rem, 1.66vw + 2.03rem, 3.35rem);
+  --fs-xxxl: clamp(3.05rem, 2.58vw + 2.41rem, 4.47rem);
 
   //space
   --space-200: .5rem;

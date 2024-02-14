@@ -5,19 +5,29 @@
   flex-wrap: wrap;
 
 
-  &__menu {
+  &__list {
     gap: var(--space-500);
     flex-wrap: wrap;
   }
 
-  &__link:hover {
-    color: var(--color-black-light);
+  &__link {
+    color: var(--color-black-base);
+
+    &:hover,
+    &:focus {
+      color: var(--color-black-light);
+    }
+
+    &.button:hover {
+
+      color: var(--color-gray-base);
+    }
+
   }
 
   &__logo {
     align-self: end;
   }
-
 }
 
 .hero {
@@ -38,6 +48,58 @@
     width: 80%;
     margin-bottom: var(--space-600);
   }
+}
 
+.difference {
+  margin-top: var(--space-800);
+  grid-template: 1fr 3.5fr / 1fr 1fr;
+  column-gap: var(--space-700);
+  grid-auto-flow: column;
 
+  &__heading {
+    width: 80%;
+  }
+
+  &__description {
+    margin-top: var(--space-200);
+    width: 60%;
+  }
+
+  &__feature {
+    counter-reset: feature;
+    grid-row: span 2;
+    width: 80%;
+    justify-self: end;
+  }
+
+  &__feature-item {
+
+    &+#{&} {
+      margin-top: var(--space-600);
+    }
+  }
+
+  &__feature-heading {
+    position: relative;
+
+    &::before {
+      counter-increment: feature;
+      content: counter(feature, decimal-leading-zero);
+      position: absolute;
+      left: -6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-red-base);
+      color: var(--color-gray-base);
+      width: 6ch;
+      text-align: center;
+      padding-top: var(--space-200);
+      padding-bottom: var(--space-200);
+      border-radius: var(--radius-base);
+    }
+  }
+
+  &__feature-desc {
+    margin-top: var(--space-200);
+  }
 }

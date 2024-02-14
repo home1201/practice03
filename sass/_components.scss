@@ -15,16 +15,19 @@
 }
 
 
-.button,
-a.button {
+.button {
   padding: var(--space-300) var(--space-500);
   background-color: var(--color-red-base);
-  color: var(--color-gray-base);
   border-radius: var(--radius-base);
-}
+  filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
 
-.button:hover,
-a.button:hover {
-  background-color: var(--color-red-light);
-  color: var(--color-gray-base);
+  &:link,
+  &:visited {
+    color: var(--color-gray-base);
+  }
+
+  &:hover {
+    background-color: var(--color-red-light);
+    color: var(--color-gray-base);
+  }
 }
