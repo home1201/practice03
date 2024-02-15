@@ -53,7 +53,6 @@
 .difference {
   margin-top: var(--space-800);
   grid-template: 1fr 3.5fr / 1fr 1fr;
-  column-gap: var(--space-700);
   grid-auto-flow: column;
 
   &__heading {
@@ -68,13 +67,12 @@
   &__feature {
     counter-reset: feature;
     grid-row: span 2;
-    width: 80%;
+    width: 75%;
     justify-self: end;
   }
 
   &__feature-item {
-
-    &+#{&} {
+    &+& {
       margin-top: var(--space-600);
     }
   }
@@ -101,5 +99,73 @@
 
   &__feature-desc {
     margin-top: var(--space-200);
+  }
+}
+
+.recommend {
+  margin-top: var(--space-900);
+  text-align: center;
+
+  &__list {
+    white-space: nowrap;
+    margin-top: var(--space-800);
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+    width: 45%;
+    padding: var(--space-600);
+    background-color: var(--color-gray-base);
+
+    &+& {
+      margin-left: var(--space-600);
+    }
+  }
+
+  &__person-img {
+    position: absolute;
+    width: 5rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__name {
+    margin-top: var(--space-700);
+    font-weight: var(--font-weight-xbd);
+    color: var(--color-black-base);
+  }
+
+  &__comment {
+    margin-top: var(--space-400);
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: var(--space-700);
+  }
+}
+
+.cta {
+  margin-top: var(--space-900);
+  background-color: var(--color-red-base);
+  padding-top: var(--space-700);
+  padding-bottom: var(--space-700);
+  background-image: url(../images/bg-simplify-section-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto;
+
+  &__wrapper {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-weight: var(--font-weight-xbd);
+    width: 45%;
+    color: var(--color-red-exlight);
   }
 }

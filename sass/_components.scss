@@ -30,4 +30,18 @@
     background-color: var(--color-red-light);
     color: var(--color-gray-base);
   }
+
+  &--white {
+
+    &:link,
+    &:visited {
+      color: var(--color-red-base);
+      background-color: var(--color-gray-base);
+      filter: none;
+    }
+
+    &:hover {
+      color: hsl(13, 100%, 86%);
+    }
+  }
 }

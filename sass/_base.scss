@@ -20,10 +20,10 @@ body {
   font-size: var(--fs-base);
   line-height: 1.6;
   letter-spacing: -.25px;
-  background-image: url(../images/bg-tablet-pattern.svg);
+  background-image: url(../images/bg-tablet-pattern.svg), url(../images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
-  background-position: left 100% top -25%;
-  background-size: auto 45%;
+  background-position: right top -25%, left -30% bottom 20%;
+  background-size: auto 30%;
 }
 
 a {
@@ -57,19 +57,11 @@ h3 {
   letter-spacing: -.75px;
 }
 
+main {
+  overflow-x: clip;
+}
+
 ul,
 li {
   list-style: none;
 }
-
-//
-// ol {
-//   list-style-type: none;
-//   counter-reset: li;
-//
-//   li:before {
-//     counter-increment: li;
-//     content: counter(li, decimal-leading-zero);
-//     color: red;
-//   }
-// }
