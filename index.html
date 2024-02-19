@@ -11,14 +11,14 @@
 
 <body>
   <header class="wrapper header flex">
-    <a class="header__logo" href="#"><img src="images/logo.svg" alt="go to homepage"></a>
+    <a class="header__logo-link" href="#"><img class="header__logo logo" src="images/logo.svg" alt="go to homepage"></a>
     <nav class="header__menu" aria-label="메인 메뉴, Primary menu">
       <ul class="header__list flex">
         <li class="header__item"><a class="header__link" href="#">Pricing</a></li>
         <li class="header__item"><a class="header__link" href="#">Product</a></li>
         <li class="header__item"><a class="header__link" href="#">About Us</a></li>
         <li class="header__item"><a class="header__link" href="#">Careers</a></li>
-        <li class="header__item u-margin-right-auto"><a class="header__link" href="#">Community</a></li>
+        <li class="header__item"><a class="header__link" href="#">Community</a></li>
       </ul>
     </nav>
     <a class="header__link button" href="#">Get Started</a>
@@ -38,22 +38,22 @@
       <p class="difference__description">Manage provides all the functionality your team needs, without
         the complexity. Our software is tailor-made for modern digital
         product teams.</p>
-      <section class="difference__feature">
-        <article class="difference__feature-item">
-          <h3 class="difference__feature-heading">Track company-wide progress</h3>
-          <p class="difference__feature-desc">See how your day-to-day tasks fit into the wider vision. Go from
+      <section class="difference__feature feature">
+        <article class="feature__item">
+          <h3 class="feature__heading">Track company-wide progress</h3>
+          <p class="feature__desc">See how your day-to-day tasks fit into the wider vision. Go from
             tracking progress at the milestone level all the way done to the
             smallest of details. Never lose sight of the bigger picture again.</p>
         </article>
-        <article class="difference__feature-item">
-          <h3 class="difference__feature-heading">Advanced built-in reports</h3>
-          <p class="difference__feature-desc">Set internal delivery estimates and track progress toward company
+        <article class="feature__item">
+          <h3 class="feature__heading">Advanced built-in reports</h3>
+          <p class="feature__desc">Set internal delivery estimates and track progress toward company
             goals. Our customisable dashboard helps you build out the reports
             you need to keep key stakeholders informed.</p>
         </article>
-        <article class="difference__feature-item">
-          <h3 class="difference__feature-heading">Everything you need in one place</h3>
-          <p class="difference__feature-desc">Stop jumping from one service to another to communicate, store files,
+        <article class="feature__item">
+          <h3 class="feature__heading">Everything you need in one place</h3>
+          <p class="feature__desc">Stop jumping from one service to another to communicate, store files,
             track tasks and share documents. Manage offers an all-in-one team
             productivity solution.</p>
         </article>
@@ -62,29 +62,29 @@
     <section class="recommend wrapper">
       <h2 class="recommend__heading">What they’ve said</h2>
       <section class="recommend__list">
-        <article class="recommend__item">
-          <img src="./images/avatar-anisha.png" alt="" class="recommend__person-img">
-          <div class="recommend__name">Anisha Li</div>
-          <p class="recommend__comment">“Manage has supercharged our team’s workflow. The ability to maintain
+        <article class="recommend__item person">
+          <img src="./images/avatar-anisha.png" alt="" class="person__image">
+          <div class="person__name">Anisha Li</div>
+          <p class="person__comment">“Manage has supercharged our team’s workflow. The ability to maintain
             visibility on larger milestones at all times keeps everyone motivated.”</p>
         </article>
-        <article class="recommend__item">
-          <img src="./images/avatar-ali.png" alt="" class="recommend__person-img">
-          <div class="recommend__name">Ali Bravo</div>
-          <p class="recommend__comment">“We have been able to cancel so many other subscriptions since using
+        <article class="recommend__item person">
+          <img src="./images/avatar-ali.png" alt="" class="person__image">
+          <div class="person__name">Ali Bravo</div>
+          <p class="person__comment">“We have been able to cancel so many other subscriptions since using
             Manage. There is no more cross-channel confusion and everyone is much
             more focused.”</p>
         </article>
-        <article class="recommend__item">
-          <img src="./images/avatar-richard.png" alt="" class="recommend__person-img">
-          <div class="recommend__name">Richard Watts</div>
-          <p class="recommend__comment">“Manage allows us to provide structure and process. It keeps us organized
+        <article class="recommend__item person">
+          <img src="./images/avatar-richard.png" alt="" class="person__image">
+          <div class="person__name">Richard Watts</div>
+          <p class="person__comment">“Manage allows us to provide structure and process. It keeps us organized
             and focused. I can’t stop recommending them to everyone I talk to!”</p>
         </article>
-        <article class="recommend__item">
-          <img src="./images/avatar-shanai.png" alt="" class="recommend__person-img">
-          <div class="recommend__name">Shanai Gough</div>
-          <p class="recommend__comment">“Their software allows us to track, manage and collaborate on our projects
+        <article class="recommend__item person">
+          <img src="./images/avatar-shanai.png" alt="" class="person__image">
+          <div class="person__name">Shanai Gough</div>
+          <p class="person__comment">“Their software allows us to track, manage and collaborate on our projects
             from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
         </article>
       </section>
@@ -97,34 +97,33 @@
       </div>
     </section>
   </main>
-  <footer>
-    <section class="contact">
-      <img class="contact__logo" src="images/logo.svg" alt="">
+  <footer class="footer grid">
+    <section class="contact footer__contact flex">
+      <img class="contact__logo logo" src="images/logo-white.svg" alt="">
       <section class="contact__list">
-        <a class="contact__link" href="#"><img class="contact__image" src="images/icon-facebook.svg"
-            alt="facebook link"></a>
-        <a class="contact__link" href="#"><img class="contact__image" src="images/icon-youtube.svg"
-            alt="youtube link"></a>
-        <a class="contact__link" href="#"><img class="contact__image" src="images/icon-twitter.svg"
-            alt="twitter link"></a>
-        <a class="contact__link" href="#"><img class="contact__image" src="images/icon-pinterest.svg"
-            alt="pinterest link"></a>
-        <a class="contact__link" href="#"><img class="contact__image" src="images/icon-instagram.svg"
-            alt="instagram link"></a>
+        <a class="contact__link" href="#"><i class="contact__icon icon-facebook"></i><span class="u-hide">facebook
+            link</span></a>
+        <a class="contact__link" href="#"><i class="contact__icon icon-youtube"></i><span class="u-hide">youtube
+            link</span></a>
+        <a class="contact__link" href="#"><i class="contact__icon icon-twitter"></i><span class="u-hide">twitter
+            link</span></a>
+        <a class="contact__link" href="#"><i class="contact__icon icon-pinterest"></i><span class="u-hide">pinterest
+            link</span></a>
+        <a class="contact__link" href="#"><i class="contact__icon icon-instagram"></i><span class="u-hide">instagram
+            link</span></a>
       </section>
     </section>
-    <ul class="submenu" aria-label="보조 메뉴, Seconday menu">
+    <ul class="submenu footer__submenu grid" aria-label="보조 메뉴, Seconday menu">
       <li class="submenu__item"><a class="submenu__link" href="#">Home</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Pricing</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Product</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">About Us</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Careers</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Community</a></li>
-      <li class="submenu__item"><a class="submenu__link" href="#">Get Started</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Privacy Policy</a></li>
     </ul>
-    <form class="subscription" action="#">
-      <label class="subscription__label" for="email">Updates in your inbox…</label>
+    <form class="subscription footer__subscription" action="#">
+      <label class="subscription__label u-hide" for="email">Updates in your inbox…</label>
       <input class="subscription__input" id="email" type="text" required>
       <button class="subscription__button button" type="submit">Go</button>
     </form>

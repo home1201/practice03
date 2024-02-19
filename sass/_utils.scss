@@ -1,25 +1,4 @@
-@use 'sass:math';
-
-//Function
-@function rem($pixel) {
-  @if math.is-unitless($pixel) {
-    @return math.div($pixel, 16)+rem;
-  }
-
-  @else {
-    @error 'Don\'t use units when using the rem() function; only numbers.';
-  }
-}
-
-@function em($pixel) {
-  @if math.is-unitless($pixel) {
-    @return math.div($pixel, 16)+em;
-  }
-
-  @else {
-    @error 'Don\'t use units when using the em() function; only numbers.';
-  }
-}
+@use 'mixins' as m;
 
 .u-margin-right-auto {
   margin-right: auto;
@@ -27,4 +6,8 @@
 
 .u-flex-1 {
   flex: 1;
+}
+
+.u-hide {
+  @include m.hide-el;
 }

@@ -1,4 +1,4 @@
-@use 'utils' as u;
+@use 'functions' as f;
 
 //CSS Variables
 :root {
@@ -41,6 +41,6 @@
   --radius-base: 25px;
 }
 
-// //Sass Variables
-$breakpoint-mobile: u.em(480);
-$content-max-width: u.em(1160);
+//Sass Variables
+$breakpoint-mobile: f.em(480);
+$content-max-width: f.em(1160);

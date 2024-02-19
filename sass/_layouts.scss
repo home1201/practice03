@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 .header {
   margin-top: var(--space-500);
   justify-content: space-between;
@@ -18,6 +20,10 @@
       color: var(--color-black-light);
     }
 
+    &.button {
+      filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
+    }
+
     &.button:hover {
 
       color: var(--color-gray-base);
@@ -25,7 +31,7 @@
 
   }
 
-  &__logo {
+  &__logo-link {
     align-self: end;
   }
 }
@@ -70,36 +76,6 @@
     width: 75%;
     justify-self: end;
   }
-
-  &__feature-item {
-    &+& {
-      margin-top: var(--space-600);
-    }
-  }
-
-  &__feature-heading {
-    position: relative;
-
-    &::before {
-      counter-increment: feature;
-      content: counter(feature, decimal-leading-zero);
-      position: absolute;
-      left: -6rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--color-red-base);
-      color: var(--color-gray-base);
-      width: 6ch;
-      text-align: center;
-      padding-top: var(--space-200);
-      padding-bottom: var(--space-200);
-      border-radius: var(--radius-base);
-    }
-  }
-
-  &__feature-desc {
-    margin-top: var(--space-200);
-  }
 }
 
 .recommend {
@@ -122,24 +98,6 @@
     &+& {
       margin-left: var(--space-600);
     }
-  }
-
-  &__person-img {
-    position: absolute;
-    width: 5rem;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__name {
-    margin-top: var(--space-600);
-    font-weight: var(--font-weight-xbd);
-    color: var(--color-black-base);
-  }
-
-  &__comment {
-    margin-top: var(--space-400);
   }
 
   &__link {
@@ -167,5 +125,30 @@
     font-weight: var(--font-weight-xbd);
     width: 45%;
     color: var(--color-red-exlight);
+  }
+
+  &__link {
+    filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
+  }
+}
+
+.footer {
+  background-color: var(--color-black-dark);
+  padding-inline: max(2rem, (100% - v.$content-max-width) / 2);
+  grid-template: 1fr 1fr / 1fr 2fr 1fr;
+  grid-auto-flow: column;
+  padding-top: var(--space-700);
+  padding-bottom: var(--space-700);
+
+  &__contact {
+    flex-direction: column;
+    justify-content: space-between;
+    grid-row: span 2;
+  }
+
+  &__submenu {
+    grid-template: repeat(4, 1fr) / 1fr 1fr;
+    justify-content: center;
+    grid-row: span 2;
   }
 }
