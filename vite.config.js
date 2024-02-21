@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
   server: {
@@ -7,4 +8,10 @@ export default defineConfig({
     hmr: { host: 'localhost', protocol: 'ws' }, // HMR 엔더포인트 및 프로토콜 설정
   },
   base: "./",
+  resolve: {
+    alias: [{
+      find: '../font',
+      replacement: path.resolve(__dirname, '/font'), // replace this path with your actual path
+    }],
+  }
 });
