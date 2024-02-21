@@ -20,12 +20,7 @@
       color: var(--color-black-light);
     }
 
-    &.button {
-      filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
-    }
-
     &.button:hover {
-
       color: var(--color-gray-base);
     }
 
@@ -126,16 +121,12 @@
     width: 45%;
     color: var(--color-red-exlight);
   }
-
-  &__link {
-    filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
-  }
 }
 
 .footer {
   background-color: var(--color-black-dark);
   padding-inline: max(2rem, (100% - v.$content-max-width) / 2);
-  grid-template: 1fr 1fr / 1fr 2fr 1fr;
+  grid-template: 1fr 1fr / 1fr 2fr auto;
   grid-auto-flow: column;
   padding-top: var(--space-700);
   padding-bottom: var(--space-700);
@@ -150,5 +141,10 @@
     grid-template: repeat(4, 1fr) / 1fr 1fr;
     justify-content: center;
     grid-row: span 2;
+  }
+
+  &__copyright {
+    align-self: end;
+    justify-self: end;
   }
 }

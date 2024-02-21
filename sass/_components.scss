@@ -20,6 +20,7 @@
   background-color: var(--color-red-base);
   border-radius: var(--radius-base);
   color: var(--color-gray-base);
+  filter: drop-shadow(0px 3px 1.5px hsl(0 0% 80%));
 
   &:link,
   &:visited {
@@ -143,4 +144,40 @@
       color: var(--color-red-light);
     }
   }
+}
+
+.subscription {
+  position: relative;
+
+  &__input {
+    padding: var(--space-400) var(--space-500);
+    font-size: var(--fs-base);
+    border-radius: var(--radius-base);
+    border: none;
+    margin-right: var(--space-100);
+
+    &:focus {
+      outline: 1.7px solid var(--color-red-base);
+      color: var(--color-red-base);
+
+      &:invalid+.subscription__invalid:after {
+        content: "Please insert a valid email";
+        color: var(--color-red-base);
+        position: absolute;
+        bottom: calc(var(--space-300) * -1);
+        left: var(--space-500);
+        font-size: var(--fs-sm);
+        font-style: italic;
+      }
+    }
+  }
+
+  &__button {
+    filter: none;
+  }
+}
+
+.copyright {
+  font-size: var(--fs-sm);
+  letter-spacing: 1.05;
 }
