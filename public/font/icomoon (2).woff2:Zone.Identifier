@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/18450a78-0cc5-4528-b291-ce72f0d4e6d5/icomoon.woff2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240216%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240216T092303Z&X-Amz-Expires=86400&X-Amz-Signature=a4cfb2cb8e1e46672c1e189a98e7a224ec2c7fe42ee79345515461bcbcf3766c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22icomoon.woff2%22&response-content-type=font%2Fwoff2&x-id=GetObject
