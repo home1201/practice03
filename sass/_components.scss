@@ -10,7 +10,7 @@
 }
 
 .wrapper {
-  width: min(v.$content-max-width, 100% - 2rem);
+  width: min(v.$content-max-width, 100% - 3rem);
   margin-inline: auto;
 }
 
@@ -65,7 +65,7 @@
       counter-increment: feature;
       content: counter(feature, decimal-leading-zero);
       position: absolute;
-      left: -6rem;
+      left: calc(-1 * var(--space-800));
       top: 50%;
       transform: translateY(-50%);
       background-color: var(--color-red-base);
