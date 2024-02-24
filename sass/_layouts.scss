@@ -6,6 +6,25 @@
   align-items: center;
   flex-wrap: wrap;
 
+  &__menu-toggle {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    display: none;
+    transition: all 0.5s;
+
+    @media (width < v.$breakpoint-mobile) {
+      background-image: url('../images/icon-hamburger.svg');
+      display: block;
+
+      &[data-menuToggle="open"] {
+        background-image: url('../images/icon-close.svg');
+      }
+    }
+  }
 
   &__list {
     gap: var(--space-500);
@@ -45,6 +64,10 @@
 
   &__content {
     flex: 1;
+
+    @media screen and (width < v.$breakpoint-mobile) {
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -59,11 +82,17 @@
   &__description {
     width: 65%;
     margin-bottom: var(--space-600);
+
+    @media screen and (width < v.$breakpoint-mobile) {
+      width: 80%;
+      margin-inline: auto;
+    }
   }
 
   &__image {
     @media screen and (width < v.$breakpoint-mobile) {
       width: 100%;
+      order: -1;
     }
   }
 }
