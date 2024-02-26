@@ -1,3 +1,4 @@
+@use './variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800;900&display=swap');
 
 //Reset
@@ -23,6 +24,19 @@ body {
   background-repeat: no-repeat;
   background-position: right top -25%, left -30% bottom 20%;
   background-size: auto 30%;
+
+  @media screen and (width < v.$breakpoint-mobile) {
+    &::after {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
 }
 
 a {

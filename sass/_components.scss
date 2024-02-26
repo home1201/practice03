@@ -61,6 +61,18 @@
   &__heading {
     position: relative;
 
+    &::after {
+      @media screen and (width < v.$breakpoint-mobile) {
+        content: "";
+        background-color: var(--color-red-exlight);
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        left: var(--space-600);
+        z-index: -1;
+      }
+    }
+
     &::before {
       counter-increment: feature;
       content: counter(feature, decimal-leading-zero);
@@ -75,6 +87,13 @@
       padding-top: var(--space-200);
       padding-bottom: var(--space-200);
       border-radius: var(--radius-base);
+
+      @media screen and (width < v.$breakpoint-mobile) {
+        position: static;
+        display: inline-block;
+        margin-right: var(--space-300);
+        transform: translateY(0);
+      }
     }
   }
 
@@ -105,12 +124,26 @@
 }
 
 .contact {
+  &__list {
+    @media screen and (width < v.$breakpoint-mobile) {
+      order: -1;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+  }
+
   &__link {
 
     &:link,
     &:visited {
       color: var(--color-gray-base);
       font-size: var(--fs-md);
+
+      @media screen and (width < v.$breakpoint-mobile) {
+        font-size: var(--fs-xl);
+      }
     }
 
     &:hover {
@@ -126,6 +159,10 @@
 .submenu {
   grid-auto-flow: column;
   row-gap: var(--space-200);
+
+  @media screen and (width < v.$breakpoint-mobile) {
+    row-gap: var(--space-300);
+  }
 
   &__item {
     width: fit-content;
@@ -149,6 +186,11 @@
 .subscription {
   position: relative;
 
+  @media screen and (width < v.$breakpoint-mobile) {
+    order: -2;
+    margin-bottom: var(--space-300);
+  }
+
   &__input {
     padding: var(--space-400) var(--space-500);
     font-size: var(--fs-base);
@@ -168,6 +210,10 @@
         left: var(--space-500);
         font-size: var(--fs-sm);
         font-style: italic;
+
+        @media screen and (width < v.$breakpoint-mobile) {
+          bottom: calc(var(--space-500) * -1);
+        }
       }
     }
   }
