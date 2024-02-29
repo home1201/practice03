@@ -9,12 +9,12 @@
   <title>네 번째 연습</title>
 </head>
 
-<body>
+<body data-menu='closed'>
   <header class="wrapper header flex">
     <a class="header__logo-link" href="#"><img class="header__logo logo" src="images/logo.svg" alt="go to homepage"></a>
-    <button class="header__menu-toggle" aria-hidden="true" data-menuToggle="close"></button>
+    <button type="button" class="header__menu-toggle" aria-hidden="true" data-menu-toggle data-menu="closed"></button>
     <nav class="header__menu" aria-label="메인 메뉴, Primary menu">
-      <ul class="header__list flex">
+      <ul class="header__list flex" data-menu-list data-menu='closed'>
         <li class="header__item"><a class="header__link" href="#">Pricing</a></li>
         <li class="header__item"><a class="header__link" href="#">Product</a></li>
         <li class="header__item"><a class="header__link" href="#">About Us</a></li>
@@ -89,6 +89,12 @@
             from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
         </article>
       </section>
+      <div class="recommend__btn-list" aria-hidden="true">
+        <button type="button" class="recommend__btn"></button>
+        <button type="button" class="recommend__btn"></button>
+        <button type="button" class="recommend__btn"></button>
+        <button type="button" class="recommend__btn"></button>
+      </div>
       <a class="recommend__link button" href="#">Get Started</a>
     </section>
     <section class="cta">

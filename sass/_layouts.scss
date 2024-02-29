@@ -1,10 +1,37 @@
 @use './variables' as v;
+@use './mixins' as m;
+
+body {
+  &::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: transparent;
+  }
+
+  transition: background-image 1s;
+
+  &[data-menu="opened"] {
+    @media screen and (width < v.$breakpoint-mobile) {
+      &::after {
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        z-index: 1;
+      }
+    }
+  }
+}
+
 
 .header {
   margin-top: var(--space-500);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 
   &__menu-toggle {
     background-color: transparent;
@@ -14,14 +41,16 @@
     height: 2rem;
     border: none;
     display: none;
-    transition: all 0.5s;
+    transition: background-image 0.3s;
     z-index: 2;
+    position: absolute;
+    right: 0;
 
     @media (width < v.$breakpoint-mobile) {
       background-image: url('../images/icon-hamburger.svg');
       display: block;
 
-      &[data-menuToggle="open"] {
+      &[data-menu="opened"] {
         background-image: url('../images/icon-close.svg');
       }
     }
@@ -38,7 +67,6 @@
     flex-wrap: wrap;
     z-index: 2;
 
-
     @media screen and (width < v.$breakpoint-mobile) {
       flex-direction: column;
       position: absolute;
@@ -50,6 +78,16 @@
       text-align: center;
       padding: var(--space-600);
       border-radius: var(--radius-sm);
+      opacity: 0;
+      z-index: -1;
+    }
+
+
+    &[data-menu="opened"] {
+      @media screen and (width < v.$breakpoint-mobile) {
+        opacity: 1;
+        z-index: 2;
+      }
     }
   }
 
@@ -83,10 +121,6 @@
     align-self: end;
     margin-right: var(--space-500);
     z-index: 2;
-
-    @media screen and (width < v.$breakpoint-mobile) {
-      margin-right: auto;
-    }
   }
 }
 
@@ -194,6 +228,10 @@
     padding: var(--space-600);
     background-color: var(--color-gray-base);
 
+    @media screen and (width < v.$breakpoint-mobile) {
+      width: 100%;
+    }
+
     &+& {
       margin-left: var(--space-600);
     }
@@ -202,6 +240,38 @@
   &__link {
     display: inline-block;
     margin-top: var(--space-700);
+  }
+
+  &__btn-list {
+    @include m.hide-el;
+
+    @media screen and (width < v.$breakpoint-mobile) {
+      @include m.show-el;
+    }
+  }
+
+  &__btn {
+    margin-top: var(--space-600);
+
+    &+& {
+      margin-left: var(--space-100);
+    }
+
+    &::after {
+      content: "●";
+      color: transparent;
+      outline: 1px solid var(--color-red-base);
+      display: inline-block;
+      width: 1ch;
+      height: 1ch;
+      border-radius: 50%;
+    }
+
+    &--select {
+      &::after {
+        background-color: var(--color-red-base);
+      }
+    }
   }
 }
 

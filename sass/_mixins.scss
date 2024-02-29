@@ -11,8 +11,9 @@
 
 @mixin show-el {
   clip-path: none;
+  position: static;
   height: auto;
-  width: max-content;
+  width: auto;
 }
 
 @mixin mq-mobile {
