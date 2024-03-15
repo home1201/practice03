@@ -10,7 +10,7 @@
 }
 
 .wrapper {
-  width: min(v.$content-max-width, 100% - 3rem);
+  width: min(v.$content-max-width, 100% - 2rem);
   margin-inline: auto;
 }
 
@@ -65,7 +65,7 @@
         content: "";
         background-color: var(--color-red-exlight);
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         left: var(--space-600);
         z-index: -1;
@@ -76,12 +76,12 @@
       counter-increment: feature;
       content: counter(feature, decimal-leading-zero);
       position: absolute;
-      left: calc(-1 * var(--space-800));
+      left: calc(-1.3 * var(--space-700));
       top: 50%;
       transform: translateY(-50%);
       background-color: var(--color-red-base);
       color: var(--color-gray-base);
-      width: 6ch;
+      width: 5ch;
       text-align: center;
       padding-top: var(--space-200);
       padding-bottom: var(--space-200);
@@ -184,6 +184,8 @@
 
 .subscription {
   position: relative;
+  align-items: start;
+  height: min-content;
 
   @media screen and (width < v.$breakpoint-mobile) {
     order: -2;
@@ -197,10 +199,7 @@
     border-radius: var(--radius-base);
     border: none;
     margin-right: var(--space-100);
-
-    @media screen and (width < v.$breakpoint-mobile) {
-      width: 100%;
-    }
+    width: 100%;
 
 
     &:focus {
@@ -211,14 +210,10 @@
         content: "Please insert a valid email";
         color: var(--color-red-base);
         position: absolute;
-        bottom: calc(var(--space-300) * -1);
+        bottom: calc(var(--space-500) * -1);
         left: var(--space-500);
         font-size: var(--fs-sm);
         font-style: italic;
-
-        @media screen and (width < v.$breakpoint-mobile) {
-          bottom: calc(var(--space-500) * -1);
-        }
       }
     }
   }

@@ -1,7 +1,7 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-body {
+.dark-layer {
   &::after {
     content: "";
     position: fixed;
@@ -10,21 +10,20 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: transparent;
+    opacity: 0;
+    transition: opacity 0.5s;
   }
 
-  transition: background-image 1s;
-
-  &[data-menu="opened"] {
+  &--active {
     @media screen and (width < v.$breakpoint-mobile) {
       &::after {
         background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        opacity: 1;
         z-index: 1;
       }
     }
   }
 }
-
 
 .header {
   margin-top: var(--space-500);
@@ -45,12 +44,14 @@ body {
     z-index: 2;
     position: absolute;
     right: 0;
+    top: calc(var(--space-100) * -1);
 
     @media (width < v.$breakpoint-mobile) {
       background-image: url('../images/icon-hamburger.svg');
       display: block;
 
-      &[data-menu="opened"] {
+
+      &--close {
         background-image: url('../images/icon-close.svg');
       }
     }
@@ -66,6 +67,7 @@ body {
     gap: var(--space-500);
     flex-wrap: wrap;
     z-index: 2;
+    transition: opacity 0.2s;
 
     @media screen and (width < v.$breakpoint-mobile) {
       flex-direction: column;
@@ -82,8 +84,7 @@ body {
       z-index: -1;
     }
 
-
-    &[data-menu="opened"] {
+    &--mobile-open {
       @media screen and (width < v.$breakpoint-mobile) {
         opacity: 1;
         z-index: 2;
