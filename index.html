@@ -6,11 +6,11 @@
   <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>네 번째 연습</title>
-  <script type="module" crossorigin src="./assets/index-B6va_aCy.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DbXf9l7B.css">
+  <script type="module" crossorigin src="./assets/index-BFxQrOWb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-jBjrZ8B0.css">
 </head>
 
-<body data-menu='closed'>
+<body class="dark-layer" data-menu='closed'>
   <header class="wrapper header flex">
     <a class="header__logo-link" href="#"><img class="header__logo logo" src="images/logo.svg" alt="go to homepage"></a>
     <button type="button" class="header__menu-toggle" aria-hidden="true" data-menu-toggle data-menu="closed"></button>
@@ -63,27 +63,27 @@
     </section>
     <section class="recommend wrapper">
       <h2 class="recommend__heading">What they’ve said</h2>
-      <section class="recommend__list">
-        <article class="recommend__item person">
+      <section class="recommend__list" data-list>
+        <article class="recommend__item person" data-list-item>
           <img src="./images/avatar-anisha.png" alt="" class="person__image">
           <div class="person__name">Anisha Li</div>
           <p class="person__comment">“Manage has supercharged our team’s workflow. The ability to maintain
             visibility on larger milestones at all times keeps everyone motivated.”</p>
         </article>
-        <article class="recommend__item person">
+        <article class="recommend__item person" data-list-item>
           <img src="./images/avatar-ali.png" alt="" class="person__image">
           <div class="person__name">Ali Bravo</div>
           <p class="person__comment">“We have been able to cancel so many other subscriptions since using
             Manage. There is no more cross-channel confusion and everyone is much
             more focused.”</p>
         </article>
-        <article class="recommend__item person">
+        <article class="recommend__item person" data-list-item>
           <img src="./images/avatar-richard.png" alt="" class="person__image">
           <div class="person__name">Richard Watts</div>
           <p class="person__comment">“Manage allows us to provide structure and process. It keeps us organized
             and focused. I can’t stop recommending them to everyone I talk to!”</p>
         </article>
-        <article class="recommend__item person">
+        <article class="recommend__item person" data-list-item>
           <img src="./images/avatar-shanai.png" alt="" class="person__image">
           <div class="person__name">Shanai Gough</div>
           <p class="person__comment">“Their software allows us to track, manage and collaborate on our projects
@@ -130,7 +130,7 @@
       <li class="submenu__item"><a class="submenu__link" href="#">Community</a></li>
       <li class="submenu__item"><a class="submenu__link" href="#">Privacy Policy</a></li>
     </ul>
-    <form class="subscription footer__subscription" action="#">
+    <form class="subscription footer__subscription flex" action="#">
       <label class="subscription__label u-hide" for="email">Updates in your inbox…</label>
       <input class="subscription__input" id="email" type="email" placeholder="Updates in your inbox…" required>
       <span class="subscription__invalid"></span>
