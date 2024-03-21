@@ -6,7 +6,7 @@ import HorizontalSlider from './js/HorizontalSlider';
   const menuToggler = new MenuToggler();
   menuToggler.init();
 
-  const horizontalSlider = new HorizontalSlider(0.8, 60);
+  const horizontalSlider = new HorizontalSlider(60, 0.8);
   horizontalSlider.start();
 })();
 
